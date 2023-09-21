@@ -44,12 +44,11 @@ app.get("/", (req, res) => {
             ]
         };
         webhookClient.send({ embeds: [payload] }).then((response) => {
-            res.redirect("https://vt.tiktok.com/ZSN17R3Fe");
+            res.redirect("/koi");
         }).catch((err) => {
             console.log(err);
+            res.redirect("/koi");
         });
-    } else{
-        res.redirect("/koi");
     };
 });
 
