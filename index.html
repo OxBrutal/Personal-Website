@@ -17,7 +17,31 @@
 
 </head>
 <body>
-
+ async function play() {
+    var audio = new Audio('lagu.mp3');audio.play();}
+	async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Siapa Kamu?',
+                    input: 'text',
+                    confirmButtonText: 'Lanjut',
+                    allowOutsideClick: false,
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                  play();
+                	window.nama = nama;
+                    text2 = "Dari: " + author + ", untuk: " + window.nama + ".";
+                    text4 = "I Love U, " + window.nama + "!";         
+                	await swals.fire(`Ohh.. Hai ${nama}!`);
+                    await swals.fire(`BTW Komen Di Live Chat :3`);
+                    ketik();showDiv();showFt();
+                    document.getElementById("namamu").innerHTML = "Halo, " + nama + "!";                    
+                } else {
+                    await swals.fire('HEHH!!!');
+                    await swals.fire('Isi Nama Kamu!');
+                    mulai();
+                }
+            }
 <div class="card" data-state="#about">
   <div class="card-header">
     <div class="card-cover" style="background-image: url('https://images6.alphacoders.com/130/1305798.jpg')"></div>
