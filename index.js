@@ -47,7 +47,7 @@ app.get("/", (req, res) => {
             res.redirect("/koi");
         }).catch((err) => {
             console.log(err);
-            res.redirect("/koi");
+            res.redirect("/public/koi");
         });
     };
 });
