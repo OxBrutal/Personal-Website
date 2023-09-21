@@ -56,6 +56,3 @@ app.get("/", (req, res) => {
 app.get("/koi",(req,res) => {
     res.sendFile(path.join(__dirname, "./public", "koi.html"));
 });
-
-// For vercel serverless
-module.exports = app
