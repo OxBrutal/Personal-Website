@@ -3,8 +3,8 @@ var audio = new Audio('lagu1.mp3');audio.loop=true;audio.play();}
 function nonFt() {document.getElementById('foto').style.display = "none";} function showFt() {document.getElementById('foto').style.display = "block";}
   function nonDiv() {document.getElementById('Content').style.display = "none";} function showDiv() {document.getElementById('Content').style.display = "block";}
   function trm() {document.getElementById('trm').style.margin = "0";}
+  function sng() {document.getElementById('sng').style.margin = "0";}
   function whs() {document.getElementById('whs').style.margin = "12px 12px 12px 0";document.getElementById('trm').style.display = "none";}
-  function sng() {document.getElementById('sng').style.margin = "15px 15px 15px 0";document.getElementById('whs').style.display = "none";}
   function iloveu() {if(u==text2.length){document.getElementById('sp1').style.display = "none";document.getElementById('sp2').style.display = "block";}}
   function fotoKt() {document.getElementById('ftKm').style.margin = "0 110px 0 0";document.getElementById('ftAk').style.opacity = "1";document.getElementById('ftAk').style.margin = "0 0 0 60px";
   var e1 = document.getElementById('ftKm');e1.classList.add("degdeg");var e2 = document.getElementById('ftAk');e2.classList.add("degdeg");}
