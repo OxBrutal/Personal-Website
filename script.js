@@ -1,5 +1,5 @@
 function play() {
-var audio = new Audio('lagu1.mp3');audio.play();}
+var audio = new Audio('lagu1.mp3');audio.loop=true;audio.play();}
 function nonFt() {document.getElementById('foto').style.display = "none";} function showFt() {document.getElementById('foto').style.display = "block";}
   function nonDiv() {document.getElementById('Content').style.display = "none";} function showDiv() {document.getElementById('Content').style.display = "block";}
   function trm() {document.getElementById('trm').style.margin = "0";}
